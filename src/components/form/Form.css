@@ -1,0 +1,139 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 306px;
+
+  border: 1px solid rgb(0, 0, 0);
+}
+.border-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 302px;
+  margin: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.date-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.date-container p {
+  font-size: 12px;
+  margin: 4px;
+}
+.tarikh {
+  text-align: end;
+  width: 20%;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.img img {
+  width: 80px;
+}
+.company-name {
+  font-size: 12px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0px 7px;
+}
+.info {
+  
+  display: flex;
+  text-align: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 30px;
+  margin: 5px 3px;
+  padding: 0px 5px;
+  border: 1px solid black;
+  font-weight: 200;
+}
+.info p{
+  height: 25px;
+  text-align: center;
+ 
+}
+.gas-container {
+  display: flex;
+  align-items: center;
+  
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0px 5px;
+}
+.pelak-items{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pelak-items p{
+  margin: 0px 3px;
+}
+.baks {
+    display: flex;
+    align-items: center;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+.bak {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px 2px;
+  width: 50%;
+  height: 30px;
+  padding: 0px 5px;
+  border: 1px solid black;
+  font-size: 12px;
+}
+.warning-container {
+  font-family: "Yekan";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+}
+.signatuare-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+  padding: 5px;
+}
+.sign-area {
+    font-family: "Yekan";
+  margin: 2px;
+  margin-bottom: 10PX;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
