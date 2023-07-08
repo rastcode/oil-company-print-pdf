@@ -1,9 +1,8 @@
 import { useState } from "react";
-
 import Form from "./components/form/Form";
-import Input from "./components/input/Input";
+import Inputs from "./components/input/Inputs";
 import html2canvas from "html2canvas";
-import { InputContext } from "./context/InputContext";
+import { MainContext } from "./context/MainContext";
 import LogIn from "./components/login/LogIn";
 import { useEffect } from "react";
 import jsPDF from "jspdf";
@@ -18,6 +17,11 @@ function App() {
     third: "",
     iran: "ایران",
     forth: "",
+    first1: "",
+    second1: "",
+    third1: "",
+    iran1: " ",
+    forth1: "",
     bak1: "",
     bak2: "",
     bak3: "",
@@ -25,6 +29,7 @@ function App() {
     total: "",
     arze: "",
   });
+  const [date, setDate] = useState("");
   var options = {
     min: 12,
     max: 12,
@@ -44,7 +49,7 @@ function App() {
     p: "321654",
   });
 
-  const [isLogin, setIsLogin] = useState(localStorage.getItem("isLogin")||'');
+  const [isLogin, setIsLogin] = useState(localStorage.getItem("isLogin") || "");
   useEffect(() => {
     localStorage.setItem("isLogin", isLogin);
   }, [isLogin]);
@@ -57,7 +62,7 @@ function App() {
       const pdf = new jsPDF({
         orientation: "p",
         unit: "in",
-        format: [17.7, 9.9],
+        format: [16.3, 9.9],
         floatPrecision: 16,
       });
       pdf.addImage(imgData, "PNG", 0, 0);
@@ -69,13 +74,14 @@ function App() {
   const handelBtn = () => {
     downloadImage();
   };
+
   return (
-    <InputContext.Provider
-      value={{ setInformation, information, up, setIsLogin }}
+    <MainContext.Provider
+      value={{ setInformation, information, up, setIsLogin, date, setDate }}
     >
       {isLogin ? (
         <div className="main-container">
-          <Input />
+          <Inputs />
           <div id="table-container" className="print-container">
             <Form />
           </div>
@@ -89,7 +95,7 @@ function App() {
           <LogIn />
         </div>
       )}
-    </InputContext.Provider>
+    </MainContext.Provider>
   );
 }
 

@@ -1,11 +1,15 @@
 import React from "react";
 import "./Form.css";
 import naft from "../../assets/image/naft.png";
-import { InputContext } from "../../context/InputContext";
+import { MainContext } from "../../context/MainContext";
 import { useContext } from "react";
+import Info from "./Info";
+import Pelak from "./Pelak";
+import Bak from "./Bak";
+
 
 function Form() {
-  const { information, setInformation } = useContext(InputContext);
+  const { information, date } = useContext(MainContext);
   const {
     username,
     border,
@@ -15,89 +19,60 @@ function Form() {
     bak3,
     bak4,
     arze,
-    first,
-    second,
-    third,
 
-    forth,
+    total,
   } = information;
 
-  let totaly =
-    parseInt(information.bak1) +
-    parseInt(information.bak2) +
-    parseInt(information.bak3) +
-    parseInt(information.bak4);
+ 
 
   return (
-    <div id="table-container" className="form-container">
+    
+ <div id="table-container" className="form-container">
       <div className="border-container">
         <div className="date-container">
-          <div className="tarikh">1399/2/5</div>
+          <div className="tarikh">{date && date.toString().split(" ", 1)}</div>
           <div className="image-container">
             <div className="img">
               <img src={naft} alt="" />
             </div>
           </div>
-          <div className="tarikh">14:56</div>
+          <div className="tarikh">
+            {date && date.toString().split(" ").slice(1)}
+          </div>
         </div>
         <div className="company-name">شرکت ملی پخش فراورده های نفتی</div>
         <div className="info-container">
+          <Info className={"info"} placeholder={"نام کاربری"} value={username} />
+          <Info className={"info"} placeholder={"نقطه مرزی:"} value={border ? border : "پرویزخان"} />
+          
+          
+          
           <div className="info">
-            <p>نام کاربری :</p>
-            <p>{username}</p>
-          </div>
-          <div className="info">
-            <p>نقطه مرزی :</p>
-            <p>{border}</p>
-          </div>
-          <div className="info">
-            <p>شناسه :</p>
-            <p>{identety}</p>
-          </div>
-          <div className="info">
-            <p>پلاک :</p>
-            <div className="pelak-items">
-              <p>
-                {third ? `${third} ${second}${first} ${"ایران"} ${forth} ` : ""}
-              </p>
-              <p>
-                {third
-                  ? `${forth}  ${"ایران"}  ${third} ${second} ${first}  `
-                  : ""}
-              </p>
+            <p>شناسه: </p>
+            <div className="identety">
+              <p>{identety}</p>
+              <p>ترانشیپ ورودی</p>
             </div>
           </div>
+          <Pelak className={"info"} placeholder={"پلاک:"} />
         </div>
         <div className="gas-container">
           <div className="baks">
-            <div className="bak">
-              <p>باک 1 :</p>
-              <p>{bak1}</p>
-            </div>
-            <div className="bak">
-              <p>باک 2 :</p>
-              <p>{bak2}</p>
-            </div>
+            <Bak name={"باک 1 :"}value={bak1}/>
+            <Bak name={"باک 2 :"}value={bak2}/>
+            
+            
+            
           </div>
           <div className="baks">
-            <div className="bak">
-              <p>باک 3 :</p>
-              <p>{bak3}</p>
-            </div>
-            <div className="bak">
-              <p>باک 4 :</p>
-              <p>{bak4}</p>
-            </div>
+          <Bak name={"باک 3 :"}value={bak3}/>
+          <Bak name={"باک 4 :"}value={bak4}/>
+            
           </div>
           <div className="baks">
-            <div className="bak">
-              <p>عرضه :</p>
-              <p>{arze}</p>
-            </div>
-            <div className="bak">
-              <p>حجم کل :</p>
-              <p>{` ${totaly}Lit `}</p>
-            </div>
+          <Bak name={"عرضه :"}value={arze}/>
+          <Bak name={"حجم کل :"}value={total ? ` ${total}Lit ` : "0"}/>
+            
           </div>
         </div>
         <div className="warning-container">اطلاعات ارسال شد</div>
@@ -106,6 +81,8 @@ function Form() {
         </div>
       </div>
     </div>
+    
+   
   );
 }
 
