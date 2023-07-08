@@ -25,7 +25,10 @@
   margin: 2px;
   border: 1px solid rgb(0, 0, 0);
 }
-
+.tranship{
+  font-family: "Yekan" !important;
+  font-size: 14px;
+}
 .date-container {
   display: flex;
   justify-content: space-between;
