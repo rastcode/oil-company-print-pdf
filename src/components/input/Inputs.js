@@ -6,6 +6,8 @@ import persian from "react-date-object/calendars/persian";
 import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
 import { useEffect } from "react";
 import { InputContext } from "../../context/InputContext";
+import persian_en from "react-date-object/locales/persian_en";
+
 import Input from "./Input";
 function Inputs() {
   const { information, setInformation, date, setDate } =
@@ -184,6 +186,7 @@ function Inputs() {
               plugins={[<TimePicker hideSeconds position="top" />]}
               onChange={setDate}
               calendar={persian}
+              locale={persian_en}
             />
           </form>
         </div>

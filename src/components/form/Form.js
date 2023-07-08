@@ -40,12 +40,12 @@ function Form() {
         <div className="info-container">
           <Info
             className={"info"}
-            placeholder={"نام کاربری: "}
+            placeholder={"نام کاربری : "}
             value={username}
           />
           <Info
             className={"info"}
-            placeholder={"نقطه مرزی: "}
+            placeholder={"نقطه مرزی : "}
             value={border ? border : "پرویزخان"}
           />
 
@@ -56,7 +56,7 @@ function Form() {
               <p className="tranship">ترانشیپ ورودی</p>
             </div>
           </div>
-          <Pelak className={"info"} placeholder={"پلاک:"} />
+          <Pelak className={"info"} placeholder={"پلاک :"} />
         </div>
         <div className="gas-container">
           <div className="baks">
