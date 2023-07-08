@@ -23,9 +23,21 @@ function LogIn() {
     <div className="login-main-container">
       <div className="login-container">
         <p>{title}</p>
-        <UserLogin name={"user"} type={"text"} placeholder={"نام کاربری"} value={user.user} onChange={(e) => userPasHandler(e)}/>
-        <UserLogin name={"pass"} type={"password"} placeholder={"رمز عبور"} value={user.pass} onChange={(e) => userPasHandler(e)}/>
-        
+        <UserLogin
+          name={"user"}
+          type={"text"}
+          placeholder={"نام کاربری"}
+          value={user.user}
+          onChange={(e) => userPasHandler(e)}
+        />
+        <UserLogin
+          name={"pass"}
+          type={"password"}
+          placeholder={"رمز عبور"}
+          value={user.pass}
+          onChange={(e) => userPasHandler(e)}
+        />
+
         <button className="login-btn" onClick={handelLogin}>
           ورود
         </button>
