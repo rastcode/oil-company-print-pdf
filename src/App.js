@@ -61,8 +61,8 @@ function App() {
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF({
         orientation: "p",
-        unit: "in",
-        format: [16.3, 9.9],
+        unit: "mm",
+        format: [440, 255],
         floatPrecision: 16,
       });
       pdf.addImage(imgData, "PNG", 0, 0);

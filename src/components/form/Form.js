@@ -49,12 +49,12 @@ function Form() {
             value={border ? border : "پرویزخان"}
           />
 
-          <div className="info">
+          <div className="info1">
             <p>شناسه: </p>
-            <div className="identety">
-              <p>{identety}</p>
-              <p className="tranship">ترانشیپ ورودی</p>
-            </div>
+            
+              <p className="khareji">{identety}</p>
+              <p className="tranship">ترانشیپپ ورودی</p>
+            
           </div>
           <Pelak className={"info"} placeholder={"پلاک :"} />
         </div>
@@ -69,7 +69,7 @@ function Form() {
           </div>
           <div className="baks">
             <Bak name={"عرضه :"} value={arze} />
-            <Bak name={"حجم کل :"} value={total ? ` ${total}Lit ` : "0"} />
+            <Bak name={"حجم کل :"} value={total ? ` ${total }Lit ` : "0" } />
           </div>
         </div>
         <div className="warning-container">اطلاعات ارسال شد</div>
