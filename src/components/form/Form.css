@@ -23,7 +23,7 @@
   align-items: center;
   flex-direction: column;
   width: 385px;
-  height: 670px;
+  height: 677px;
   border: 1px solid rgb(0, 0, 0);
 }
 .border-container {
@@ -33,7 +33,7 @@
   width: 380px;
   margin: 2px;
   border: 1px solid rgb(0, 0, 0);
-  height: 665px;
+  height: 675px;
 }
 .tranship {
   align-items: end;
@@ -97,7 +97,7 @@
   text-align: center;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 17px;
   width: 100%;
   height: 32px;
   margin: 8px 5px;
