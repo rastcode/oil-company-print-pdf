@@ -15,7 +15,7 @@ function App() {
     first: "",
     second: "",
     third: "",
-    iran: "ایران",
+    iran: "",
     forth: "",
     first1: "",
     second1: "",
@@ -57,12 +57,12 @@ function App() {
   const downloadImage = () => {
     const table = document.getElementById("table-container");
 
-    html2canvas(table, { scale: 3 }).then(function (canvas) {
+    html2canvas(table, { scale: 2.5 }).then(function (canvas) {
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF({
         orientation: "p",
         unit: "mm",
-        format: [440, 255],
+        format: [450, 258],
         floatPrecision: 16,
       });
       pdf.addImage(imgData, "PNG", 0, 0);

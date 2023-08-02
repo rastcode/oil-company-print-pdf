@@ -23,13 +23,17 @@ function Inputs() {
   };
 
   const [w, setW] = useState();
-  useEffect(() => {
-    function handleResize() {
-      setW(window.innerWidth);
-    }
+  window.addEventListener("resize", handleResize);
+  function handleResize() {
+    setW(window.innerWidth);
+  }
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setW(window.innerWidth);
+  //   }
 
-    window.addEventListener("resize", handleResize);
-  }, [w]);
+  //   window.addEventListener("resize", handleResize);
+  // }, [w]);
   const style =
     w < 680
       ? {

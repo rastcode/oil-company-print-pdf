@@ -1,6 +1,8 @@
 import React from "react";
 import "./Form.css";
-import naft from "../../assets/image/naft.png";
+import emza from "../../assets/image/emza.png";
+import etelaat from "../../assets/image/etrlaat.png";
+import naft1 from "../../assets/image/naft1.png";
 import { MainContext } from "../../context/MainContext";
 import { useContext } from "react";
 import Info from "./Info";
@@ -29,7 +31,7 @@ function Form() {
           <div className="tarikh">{date && date.toString().split(" ", 1)}</div>
           <div className="image-container">
             <div className="img">
-              <img src={naft} alt="" />
+              <img src={naft1} alt="" />
             </div>
           </div>
           <div className="tarikh">
@@ -40,7 +42,7 @@ function Form() {
         <div className="info-container">
           <Info
             className={"info"}
-            placeholder={"نام کاربری : "}
+            placeholder={"نام کاربر : "}
             value={username}
           />
           <Info
@@ -51,10 +53,9 @@ function Form() {
 
           <div className="info1">
             <p>شناسه: </p>
-            
-              <p className="khareji">{identety}</p>
-              <p className="tranship">ترانشیپپ ورودی</p>
-            
+
+            <p className="khareji">{identety}</p>
+            <p className="tranship">ترانشیپپ ورودی</p>
           </div>
           <Pelak className={"info"} placeholder={"پلاک :"} />
         </div>
@@ -69,12 +70,12 @@ function Form() {
           </div>
           <div className="baks">
             <Bak name={"عرضه :"} value={arze} />
-            <Bak name={"حجم کل :"} value={total ? ` ${total }Lit ` : "0" } />
+            <Bak name={"حجم کل :"} value={total ? ` ${total}Lit ` : "0"} />
           </div>
         </div>
-        <div className="warning-container">اطلاعات ارسال شد</div>
+        <div className="warning-container"><div className="etelaat"><img src={etelaat} alt="" /></div></div>
         <div className="signatuare-container">
-          <div className="sign-area">مهر وامضا</div>
+          <div className="sign-area"><div className="emza"><img src={emza} alt="" /></div></div>
         </div>
       </div>
     </div>

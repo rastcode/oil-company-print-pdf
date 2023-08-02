@@ -6,12 +6,12 @@ function Pelak() {
   const { information } = useContext(MainContext);
   return (
     <div className="info">
-      <p>پلاک:</p>
+      <p > پلاک:</p>
       <div className="pelak-items">
         <p>
           {`${information.third ? information.third : ""} ${
             information.second ? information.second : ""
-          }${information.first ? information.first : ""} ${"ایران"} ${
+          }${information.first ? information.first : ""} ${information.iran?information.iran:''} ${
             information.forth ? information.forth : ""
           } `}
         </p>
