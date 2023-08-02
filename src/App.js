@@ -81,8 +81,11 @@ function App() {
     >
       {isLogin ? (
         <div className="main-container">
+          <div className="print-container">
           <Inputs />
-          <div id="table-container" className="print-container">
+          </div>
+          
+          <div  className="print-container">
             <Form />
           </div>
 

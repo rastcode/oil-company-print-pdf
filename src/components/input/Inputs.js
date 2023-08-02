@@ -38,7 +38,7 @@ function Inputs() {
     w < 680
       ? {
           height: "30px",
-          width: "70vw",
+          width: "270px",
         }
       : {
           width: "20vw",

@@ -80,7 +80,7 @@
 .company-name {
   text-align: center;
   word-spacing: 5px;
-height: 22px;
+  height: 22px;
   font-size: 15px;
 }
 
@@ -118,29 +118,17 @@ height: 22px;
   border: 1px solid black;
 }
 .info p {
-  height: 28px;
+  height: 24px;
   word-spacing: 5px;
-  font-size: 18px;
+  font-size: 17px;
 }
-.identety {
-  font-family: "Custom" !important;
-  display: flex;
-  margin: 0px 5px;
-  justify-content: space-between;
-  width: 100%;
-  background: #dadada;
-  /* height: 14px; */
-}
+
 .khareji {
   font-family: "Calibry" !important;
   font-weight: 400 !important;
-  font-size: 18px !important;
+  font-size: 17px !important;
 }
-.identety p {
-  font-size: 12px;
-  font-weight: lighter;
-  height: 14px;
-}
+
 .gas-container {
   font-family: "Custom" !important;
   display: flex;
@@ -160,7 +148,7 @@ height: 22px;
 }
 .pelak-items p {
   margin: 0px 3px;
-  font-size: 14px !important;
+  font-size: 17px !important;
 }
 .baks {
   font-family: "Custom" !important;
@@ -239,4 +227,14 @@ height: 22px;
 .etelaat img {
   width: 100%;
   height: 25px;
+}
+@media screen and (max-width: 680px) {
+  .main-form-container {
+    min-width: 388px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 390px;
+    height: 680px;
+  }
 }

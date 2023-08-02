@@ -25,7 +25,8 @@ function Form() {
   } = information;
 
   return (
-    <div id="table-container" className="form-container">
+    <div id="table-container" className="main-form-container">
+      <div  className="form-container">
       <div className="border-container">
         <div className="date-container">
           <div className="tarikh">{date && date.toString().split(" ", 1)}</div>
@@ -79,6 +80,8 @@ function Form() {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 }
 
